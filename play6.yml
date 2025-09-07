@@ -1,0 +1,12 @@
+---
+- name: demonstrate file module
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Create a soft link
+      ansible.builtin.file:
+        src: /etc/PicsDir
+        dest: /etc/mylink
+        state: link
+...
+#End

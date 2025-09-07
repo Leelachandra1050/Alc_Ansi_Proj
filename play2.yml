@@ -1,0 +1,24 @@
+---
+- name: Play to create a group and then user
+  hosts: alclabs
+  become: true
+  become_user: root
+
+  tasks:
+    - name: Task1 - Create group
+      # Create a group
+      ansible.builtin.group:
+        name: alclabs
+        state: present
+        
+    - name: Task2 - Create user and add the above created group as primary group
+      # User Module to create user
+      ansible.builtin.user:
+        name: carl
+        group: alclabs
+        comment: "Carl for alclabs project"
+        password: "$6$kdlafklakdj$jVBXr3pp3MyLrgxpTrdJJyGg6oiHyEKOA/Hk0XktvUZJExw6upj736L0Zgk6aLCJdH7yVtYTQVF/boZqubKNG/"
+        state: present
+
+# END of Playbook
+...

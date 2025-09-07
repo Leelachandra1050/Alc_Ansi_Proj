@@ -1,0 +1,12 @@
+---
+- name: demonstrate file module
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Create a hard link
+      ansible.builtin.file:
+        src: /etc/passwd
+        dest: /etc/1_passwd
+        state: hard
+...
+#End
