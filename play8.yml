@@ -14,7 +14,7 @@
         vg: logsvg
         lv: loglv01
         size: 512
-        pvs: /dev/sdb 
+        pvs: /dev/sdc
 
     - name: create filesystem
       filesystem:
