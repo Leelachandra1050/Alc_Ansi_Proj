@@ -1,7 +1,7 @@
 ---
 - name: demonstrate file module
   hosts: localhost
-  become: true or false
+  become: yes
   tasks:
     - name: Create an empty file
       ansible.builtin.file:
