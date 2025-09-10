@@ -1,6 +1,6 @@
 ---
 - name: demonstrate file module
-  hosts: localhost
+  hosts: localhero
   become: true
   tasks:
     - name: Create a soft link

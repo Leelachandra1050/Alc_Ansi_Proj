@@ -7,7 +7,7 @@
       ansible.builtin.file:
         path: /etc/new_ansi.txt
         state: touch
-        owner: roots
+        owner: root
         group: ansible
         mode: '0640'
 ...
