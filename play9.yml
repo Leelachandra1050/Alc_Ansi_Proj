@@ -1,6 +1,6 @@
 ---
 # A single playbook can contain multiple plays.
-# Below demonstrate the same
+# Below demonstrate the not same
 
 - name: play1 for installing http and https
   become: true
