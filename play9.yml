@@ -25,7 +25,7 @@
       service:
         name: firewalld
         state: started
-        enabled: yes
+        enabled: no
 
     - name: Start http
       service:
