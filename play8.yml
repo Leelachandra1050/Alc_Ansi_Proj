@@ -1,7 +1,7 @@
 ---
 - name: Create a volume group using pv /dev/sdh
   hosts: localhost
-  become: false
+  become: True
   tasks: 
     - name: Create vg 
       lvg: 
