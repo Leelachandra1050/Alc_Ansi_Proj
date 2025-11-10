@@ -3,7 +3,7 @@
 # Below demonstrate the not same
 
 - name: play1 for installing http and https
-  become: true
+  become: false
   hosts: localhost
   tasks:
     - name: Install httpd & https
