@@ -1,0 +1,17 @@
+---
+- name: Demonstrate lineinfile - example2
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Create a file and add the line
+      ansible.builtin.lineinfile:
+        path: /home/ansible/statement.txt
+        line: "This is a Kasturi Leela Chandra"
+        state: present
+        create: true
+        owner: ansible
+        group: ansible
+...
+# End
+     
