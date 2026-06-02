@@ -1,0 +1,25 @@
+---
+- name: Play to create a directory
+  #hosts: [192.168.1.33, 192.168.1.37, 192.168.1.35, 192.168.1.100, 192.168.1.42]
+  hosts: all
+  become: true
+  remote_user: ansible
+  tasks:
+   - name: Create a directory in the remote server
+     ansible.builtin.file:
+      path: /home/ansible/trainer
+      state: directory
+      owner: ansible
+      group: ansible
+      mode: '0755'
+   #Task1 Complete
+   - name: copy a file to the above created directory
+     ansible.builtin.copy:
+      src: /home/ansible/playbooks/play1.yml
+      dest: /home/ansible/trainer
+      owner: ansible
+      group: ansible
+   #Task2 complete   
+...
+# End of the play
+         
